@@ -1,5 +1,6 @@
 ﻿using Expense_Tracker.Models;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ builder.Services.AddControllersWithViews();
 
 // Dependency Injection
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
+    options.UseMySql(builder.Configuration.GetConnectionString("DevConnection"), new MySqlServerVersion(new Version(8, 0, 27))));
 
 var app = builder.Build();
 
