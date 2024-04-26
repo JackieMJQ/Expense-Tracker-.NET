@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Category\" />
+    <None Remove="Views\Transaction\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Category\" />
+    <Folder Include="Views\Transaction\" />
   </ItemGroup>
 </Project>
